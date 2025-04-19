@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>User List</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Palindromes List</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>String</th>
+                <th>Yes</th>
+                <th>No</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Iterate over users -->
+            <tr th:each="a : ${allData}">
+                <td th:text="${a.palId}"></td>
+                <td th:text="${a.palStr}"></td>
+                <td th:text="${a.yes}"></td>
+                <td th:text="${a.no}"></td>
+            </tr>
+        </tbody>
+    </table>
+	<a href="/">go to home page</a>
+</body>
+</html>

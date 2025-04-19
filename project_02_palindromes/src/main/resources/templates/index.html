@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Greeting Page</title>
+</head>
+<body>
+    <h1 th:text=" ${greet}"></h1>
+	
+	
+	<form action="/pal" method="post">
+	        <label for="name">Enter String:</label>
+	        <input type="text" id="name" name="str" required />
+	        <br /><br />
+			<button type="submit">Submit</button>
+			
+	</form>
+	
+	<a href="all">show all Data</a>
+</body>
+</html>
